@@ -1,0 +1,301 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+        font-family: 'Love Ya Like A Sister', cursive;
+
+  }
+
+
+  .preload * {
+ transition: none !important;
+    }
+    
+
+  canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    overflow: hidden;
+  }
+
+  .back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-position: center;
+    background-size: cover;
+  }
+
+
+.seasons{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: white;
+  text-shadow: 
+  -0   -1px 2px #7BE586,
+   0   -1px 2px #7BE586,
+  -0    1px 2px #7BE586,
+   0    1px 2px #7BE586,
+  -1px -0   2px #7BE586,
+   1px -0   2px #7BE586,
+  -1px  0   2px #7BE586,
+   1px  0   2px #7BE586,
+  -1px -1px 2px #7BE586,
+   1px -1px 2px #7BE586,
+  -1px  1px 2px #7BE586,
+   1px  1px 2px #7BE586,
+  -1px -1px 2px #7BE586,
+   1px -1px 2px #7BE586,
+  -1px  1px 2px #7BE586,
+   1px  1px 2px #7BE586;
+
+}
+
+  .flex{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px;
+  }
+
+.rearch{
+  box-sizing: border-box;
+  max-width: 400px;
+  width:100%;
+  color: rgba(255, 255, 255, 0.473);
+  z-index: 1000;
+  /* text-align: center; */
+  /* background-color: rgba(255, 127, 80, 0.678); */
+
+}
+
+.rearch-input{
+  width: inherit;
+    /* font-family: 'Love Ya Like A Sister', cursive; */
+    border: none;
+    padding: 10px;
+    padding-left: 30px;
+    border-radius: 20px;
+    box-shadow:0px 0px 22px 16px rgba(173, 221, 230, 0.77);
+    outline: none;
+    font-size:x-large ;
+}
+.info{
+  width: 100%;
+  /* height: 150px; */
+  margin-top: 20px ;
+  /* background-color: rgba(0, 0, 139, 0.24); */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+padding: 10px;
+border-radius: 30px;
+/* background-color: rgba(0, 0, 0, 0.5); */
+overflow: hidden;
+transition: all 1s linear;
+
+}
+
+.text{
+  /* font-family: 'Love Ya Like A Sister', cursive; */
+  width: 100%;
+  text-align: center;
+  /* padding: 5px; */
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+
+.text-small{
+  font-size: 15px;
+}
+
+.text-big{
+  font-size: 30px;
+
+}
+
+#temp{
+  font-size: 70px;
+  font-family: 'Merriweather', serif;
+  color: rgb(255, 255, 255);
+  /* background-color: rgba(0, 100, 0, 0.644); */
+}
+
+
+.child{
+  width: 100%;
+  position: fixed;
+  bottom: 5px;
+}
+
+.imgChild{
+  display:block;
+  margin: 0 auto;
+  height: 300px;
+
+}
+
+
+.dark-background{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%,
+   rgba(0, 0, 0, 0.8) 10%,
+     rgba(0, 0, 0, 0.8) 20%,
+     rgba(0, 0, 0, 0.6) 30%,
+     rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0) 100%);
+  z-index: 0;
+  -webkit-animation: thunder-bg 6s infinite;
+  animation: thunder-bg 6s infinite;
+  opacity: 0;
+  visibility: hidden; 
+  transition: all 3s;
+}
+
+@-webkit-keyframes thunder-bg {
+  0% {
+      background-color: rgba(34, 34, 34, 0.9);
+  }
+  9% {
+      background-color: rgba(34, 34, 34, 0.7);
+  }
+ 
+  10.5% {
+      background-color: rgba(34, 34, 34, 0.7);
+  }
+  80% {
+      background-color: rgba(34, 34, 34, 0.8);
+  }
+  82% {
+      background-color: rgba(59, 59, 59, 0.5);
+  }
+  83% {
+      background-color: rgba(34, 34, 34, 0.9);
+  }
+  83.5% {
+      background-color: rgba(59, 59, 59, 0.3);
+  }
+  100% {
+      background-color: rgba(34, 34, 34, 0.8);
+  }
+}
+
+.fog{
+  width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden; 
+    transition: all 3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+  overflow: hidden;
+  background-color: rgba(128, 128, 128, 0.445);
+  
+}
+
+      .img{
+          animation: fogmove 10s linear infinite;
+          height: 100%;
+       
+      }
+
+      @keyframes fogmove {
+          0% {
+              transform: translate3d(0, 0, 0);
+          }
+
+       
+          45%{
+              transform: translate3d(-19%, 0, 0);
+          }
+          50%{
+              transform: translate3d(-20%, 0, 0);
+          }
+
+          55%{
+              transform: translate3d(-19%, 0, 0);
+          }
+      
+          100%{
+              transform: translate3d(0, 0, 0);
+          }
+      }
+
+
+
+      .dark-cloud{
+        opacity: 0;
+        visibility: hidden; 
+        transition: all 3s;
+        width: 100%;
+        position: absolute;
+        top: -50px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.315);
+      }
+
+  
+
+      .dark-cloud1{
+        width: 120%;
+        height: 40%;
+        
+      }
+      .dark-cloud2{
+        width: 60%;
+        position: absolute;
+        left: -20%;
+        top: -10%;
+      }
+
+
+.sun{
+  opacity: 0;
+  visibility: hidden; 
+  transition: all 3s;
+  max-width: 350px;
+  width: 50%;
+  position: absolute;
+  left: -5%;
+  top: -5%;
+}
+
+
+.visible-block{
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+.alert-box{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgba(137, 43, 226, 0.438); */
+}
+
