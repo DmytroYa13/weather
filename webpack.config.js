@@ -22,6 +22,9 @@ module.exports = {
   devServer: {
     port: 4200
   },
+
+ 
+
   
   plugins: [
     new HTMLPlugin({

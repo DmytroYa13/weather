@@ -32,28 +32,28 @@ switch (date) {
   case 0:
   case 1:
   case 11:
-    back.style.backgroundImage = `url(../img/0.jpg)`;
+    back.style.backgroundImage = `url(./img/0.jpg)`;
     seasons = 'Winter'
     break;
 
   case 2:
   case 3:
   case 4:
-    back.style.backgroundImage = `url(../img/1.jpg)`;
+    back.style.backgroundImage = `url(./img/1.jpg)`;
     seasons = 'Spring'
 
     break;
   case 5:
   case 6:
   case 7:
-    back.style.backgroundImage = `url(../img/2.jpg)`;
+    back.style.backgroundImage = `url(./img/2.jpg)`;
     seasons = 'Summer'
 
     break;
   case 8:
   case 9:
   case 10:
-    back.style.backgroundImage = `url(../img/3.jpg)`;
+    back.style.backgroundImage = `url(./img/3.jpg)`;
     seasons = 'Autumn'
 
     break;
@@ -72,6 +72,9 @@ window.addEventListener('resize', function () {
   h = canvas.height = window.innerHeight;
   console.log(w, h);
 });
+
+
+
 
 
 const stream$ = fromEvent(search, 'input')
@@ -118,7 +121,7 @@ stream$.subscribe((user) => {
       dropAmound: 1000,
       dropWidth: 1
     }
-    img.setAttribute('src', '../img/spring/springRain.png')
+    img.setAttribute('src', './img/spring/springRain.png')
     darkBackground.classList.add('visible-block')
     rain(customOptionsRain)
     thunder()
@@ -126,7 +129,7 @@ stream$.subscribe((user) => {
 
   else if (code >= 230 && code <= 233) {
 
-    img.setAttribute('src', '../img/spring/springTund.png')
+    img.setAttribute('src', './img/spring/springTund.png')
     darkBackground.classList.add('visible-block')
     thunder()
 
@@ -134,7 +137,7 @@ stream$.subscribe((user) => {
 
   else if (code >= 300 && code <= 302) {
 
-    img.setAttribute('src', '../img/spring/springDrizzle.png')
+    img.setAttribute('src', './img/spring/springDrizzle.png')
     let customOptionsRain = {
       dropAmound: 100,
       dropWidth: 1
@@ -144,7 +147,7 @@ stream$.subscribe((user) => {
 
   else if (code >= 500 && code <= 522) {
 
-    img.setAttribute('src', '../img/spring/springRain.png')
+    img.setAttribute('src', './img/spring/springRain.png')
     let customOptionsRain = {
       dropAmound: 1000,
       dropWidth: 1
@@ -156,7 +159,7 @@ stream$.subscribe((user) => {
 
   else if (code >= 600 && code <= 623) {
 
-    img.setAttribute('src', '../img/winter/winterSnow.png')
+    img.setAttribute('src', './img/winter/winterSnow.png')
 
     let customOptionsSnow = {
       flakeDensity: 3,
@@ -170,20 +173,20 @@ stream$.subscribe((user) => {
 
   else if (code >= 700 && code <= 751) {
 
-    img.setAttribute('src', '../img/winter/winterBlow.png')
+    img.setAttribute('src', './img/winter/winterBlow.png')
     fog.classList.add('visible-block')
   }
 
   else if (code === 800) {
 
-    img.setAttribute('src', '../img/summer/summerBase.png')
+    img.setAttribute('src', './img/summer/summerBase.png')
     sun.classList.add('visible-block')
 
   }
 
   else if (code >= 801 && code <= 802) {
 
-    img.setAttribute('src', '../img/summer/summerCloud.png')
+    img.setAttribute('src', './img/summer/summerCloud.png')
     darkCloud.classList.add('visible-block')
     sun.classList.add('visible-block')
 
@@ -191,13 +194,24 @@ stream$.subscribe((user) => {
 
   else if (code >= 803) {
 
-    img.setAttribute('src', '../img/spring/sptingDarkCloud.png')
+    img.setAttribute('src', './img/spring/sptingDarkCloud.png')
     darkCloud.classList.add('visible-block')
 
   }
 
 
 })
+
+
+document.addEventListener('DOMContentLoaded', function(){ 
+  setTimeout(function () {
+      console.log(window.outerWidth);
+      let viewheight = window.outerHeight;
+      let viewwidth = window.outerWidth;
+      let viewport = document.querySelector("meta[name=viewport]");
+      viewport.setAttribute("content", "height=" + viewheight + "px, width=" + viewwidth + "px, initial-scale=1.0");
+  }, 300);
+});
 
 
 
